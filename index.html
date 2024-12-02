@@ -1,206 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boomtown Festival WebPage</title>
 
-    <!-- meta tags SEO-->
-    <meta name="description" content="front page for Boomtown Festival">
-    <meta name="keywords" content="boomtown festival music Winchester story city drum and bass reggae dub">
-    <meta name="author" content="Mikey Stevenson">
 
-    <!-- social media meta tags -->
-    <meta property="og:title" content="Boomtown WebPage" />
-    <meta property="og:description" content="Front page for Boomtown Festival, highlighting all the features and info for the festival" />
-    <meta property="og:url" content="http://127.0.0.1:3000/Boomtown-Final/index.html" />
-    <meta name="twitter:title" content="Boomtown WebPage" />
-    <meta name="twitter:description" content="Front page for Boomtown Festival, highlighting all the features and info for the festival" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>The Green Gathering</title>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./Images/Favicon.png" type="boomtown-icon">
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August. ">
+    <meta name="keywords" content="the green gathering, off-grid festival, festival, green gathering festival">
+    <meta name="author" content="Ruth Haydock">
 
-    <!-- link to css style sheet -->
-    <link rel="stylesheet" href="./Styles/Boomtown-style.css">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="The Green Gathering" />
+    <meta property="og:description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August." />
+    <meta property="og:image" content="./images/green-gathering-logo.webp" />
+    <meta property="og:url" content="./images/green-gathering-logo.webp" />
+    <meta name="twitter:title" content="The Green Gathering" />
+    <meta name="twitter:description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August." />
+    <meta name="twitter:image" content="./images/green-gathering-logo.webp" />
+    <meta name="twitter:card" content="./images/green-gathering-logo.webp" />
+
+    <!-- Used to not index the content on google search, like law sections etc -->
+    <!-- <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow"> -->
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.webp">
+
+    <!-- Barlow font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./styles/final-project.css">
+
 </head>
+
 <body>
-    <!-- Header section -->
-    <header>
+
+    <!-- HEADER START -->
+    <header id="header">
+        <div class="logo">
+            <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+        </div>
+
         <nav>
-            <a href="./index.html" class="main-logo"><img src="./Images/Main-Logo.png" alt="logo"></a>
-            <ul>
-                <li><a href="#discover">Discover</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#connect">Connect</a></li>
-                <li><a href="#merch">Merch</a></li>
+            <!-- Desktop -->
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#key-info">Key Info</a></li>
+                <li><a href="#featured">Line Up</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li>
+                    <form class="example" action="/action_page.php">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li>
+                    <button>Get Tickets</button>
+                </li>
             </ul>
+
+            <!-- Tablet and Mobile -->
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
-        <div class="top-buttons">
-            <button id="info-button" class="small-button">
-                <h5>Info</h5>
-            </button>
-            <button id="tickets-button" class="small-button green">
-                <h5>Tickets</h5>
-            </button>
-        </div>
     </header>
+    <!-- HEADER END -->
 
-    <!-- Main content section -->
+
+    <!-- MAIN START -->
     <main>
-        <!-- Hero section -->
+
+        <!-- SCROLL BUTTON -->
+        <button id="scrollButton">Get Tickets</button>
+
+        <!-- HERO SECTION  -->
         <section class="hero-image">
-            <img id="transparent-logo" src="./Images/Logotyp.webp" alt="Logotype">
-            <img id="hero-image" src="./Images/peaches_tzwis_website_image_lbss_standard.webp" alt="hero-image">
-        </section>
-
-        <!-- Bang goes normal section -->
-        <section id="bang-goes-normal">
-            <h4>BANG GOES NORMAL!</h4>
-            <h1><span class="headingTyped">A MUSIC FESTIVAL, BUT NOT AS YOU KNOW IT.</span></h1>
-            <p>A parallel world where unique city districts come alive. With 12 main stages, over 50 hidden venues, thousands of performers, and one secret lineup. Boomtown is a place like no other. Enjoy a one-of-a-kind festival experience - start anywhere, follow everywhere.</p>
-            <button id="secure-ticket-button" class="big-button green">
-                <h3>SECURE YOUR TICKET</h3>
-            </button>
-        </section>
-
-        <!-- Trio cards section -->
-        <section class="trio-cards">
-            <div id="the-music" class="small-card">
-                <img class="small-card-img" src="./Images/opening_ceremony_gpnwp_website_image_lbss_standard.webp" alt="women-singing">
-                <h2>THE MUSIC</h2>
-                <p>Boomtown always celebrates the infinite variety of music from around the globe. With soundsystem culture the beating heart of the town there will also be the freshest new post-punk band, dons of the reggae world, disco divas, and afrobeat royalty. <br><br>If that wasn't enough, we'll be representing the aficionados and the underground of electronic music. From jungle to techno, house to hardcore, dub to dnb and many more, whatever your taste we'll have it covered.</p>
-                <button class="small-button learn-more-button red">
-                    <h5>LEARN MORE</h5>
-                </button>
-            </div>
-
-            <div id="the-story" class="small-card">
-                <img class="small-card-img" src="./Images/boomtown_the_twin_trail_nolzk_website_image_nxxq_standard.webp" alt="sailors">
-                <h2>THE STORY</h2>
-                <p>Boomtown is an ever-evolving story, unfolding and growing each year. The aim of the game, if you choose to play, is to discover the stories unfolding all over the city - via the Daily Rag, on posters and billboards, at happenings on the streets, or by talking to characters. <br><br>Join us… start anywhere, follow everywhere, and who knows... you could even influence the outcome…</p>
-                <button class="small-button learn-more-button yellow">
-                    <h5>LEARN MORE</h5>
-                </button>
-            </div>
-
-            <div id="the-city" class="small-card">
-                <img class="small-card-img" src="./Images/boomtown_the_twin_trail_fckpo_website_image_nxxq_standard.webp" alt="oldtown">
-                <h2>THE CITY</h2>
-                <p>Boomtown is an ever-evolving story. Eight city districts come to life, each with their own unique vision for how we build a perfect world. There's characters to meet, causes to join and secrets to be revealed around every corner. <br><br>The aim of the game, if you choose to play, is to discover the stories unfolding all over the city, and uncover the collective wisdom teaching us all how to transform our world.</p>
-                <button class="small-button learn-more-button purple">
-                    <h5>LEARN MORE</h5>
-                </button>
+            <div class="hero-text">
+                <h1>1st-4th August 2024</h1>
+                <p>The Original Off-Grid Festival</p>
+                <button type="button">Get Tickets Now</button>
             </div>
         </section>
 
-        <!-- Carousel section -->
-        <div class="carousel-container">
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
             <div class="carousel-slide">
-                <img src="./Images/trojan_sound_system_lghnw_website_image_2x_lbss_standard.webp" alt="Image 1" />
-                <img src="./Images/closing_ceremony_ffwoh_website_image_lbss_standard.webp" alt="Image 2" />
-                <img src="./Images/opening_ceremony_jyfyi_website_image_lbss_standard.webp" alt="Image 3" />
-                <img src="./Images/boomtown_the_twin_trail_wkcnp_website_image_lbss_standard.webp" alt="Image 4" />
-            </div>
-            <div class="carousel-navigation">
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
-            </div>
-            <div class="carousel-bullets">
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-            </div>
-        </div>
-
-        <!-- External JavaScript file for the carousel -->
-        <script src="./Scripts/Boomtown.js"></script>
-
-        <!-- Large cards section -->
-        <section class="large-cards">
-            <div id="discover-card" class="large-card">
-                <div class="image-container">
-                    <img src="./Images/boomtown_the_twin_trail_dxjww_website_image_lbss_standard.webp" alt="tower">
-                </div>
-                <button class="big-button">
-                    <h3>DISCOVER</h3>
-                </button>
+                <img src="./images/gen-festival-image-9.webp" alt="Image of women at festival">
+                <img src="./images/gen festival image 10.png" alt="">
+                <img src="./images/get-involved-image.webp" alt="">
             </div>
 
-            <div id="info-card" class="large-card">
-                <div class="image-container">
-                    <img src="./Images/6571cfe79bb4b446413648c3_info 1.webp" alt="woman-phone">
-                </div>
-                <button class="big-button light-red">
-                    <h3>INFO</h3>
-                </button>
-            </div>
+            <div class="about-text">
 
-            <div id="news-card" class="large-card">
-                <div class="image-container">
-                    <img src="./Images/zero_ariya_website_image_nxxq_standard.webp" alt="crowd-wall">
-                </div>
-                <button class="big-button chartreuse">
-                    <h3>NEWS</h3>
-                </button>
-            </div>
-
-            <div id="merch-card" class="large-card">
-                <div class="image-container">
-                    <img src="./Images/651eb9ce079423d26415b7f0_378794212 Facebook.webp" alt="two-models">
-                </div>
-                <button class="big-button periwinkle">
-                    <h3>MERCH</h3>
-                </button>
+                <h2>Non-profit Low Impact Festival</h2>
+                <p>Join us for four days of low impact living in an area of outstanding beauty, every nook and corner
+                    bursting with music, creativity, natural abundance and community spirit.</p>
+                <p>The original off-grid,non-profit festival: we’re powered by sun, wind, people and passion for
+                    change.Intimate solar stages showcase up and coming acts, legendary festival favourites, DJs and
+                    spellbinding raconteurs. </p>
+                <p>Share wisdom and skills; find friends old and new; weave, weld and tell stories.</p>
+                <p>Have a party - then wake up and put the world to rights.This festival’s impact lasts longer than a
+                    weekend.</p>
+                <button class="about-btn">Join Us</button>
             </div>
         </section>
 
-        <!-- Marquee section -->
-        <div class="marquee-container">
-            <div class="marquee">
-                <h3>SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; SECURE YOUR TICKET &#x2022; </h3>
+        <!-- WHAT SECTION  -->
+        <section class="know-section" id="key-info">
+            <h2 class="know-title">What You Need to Know</h2>
+            <div class="know">
+                <div class="know-sub-section">
+                    <h3>Where & How</h3>
+                    <img src="./images/where-how.webp" alt="Image of women in a van">
+                </div>
+                <div class="know-sub-section">
+                    <h3>Line Up</h3>
+                    <img src="./images/line-up-image.webp" alt="Image of people in a tent">
+                </div>
+                <div class="know-sub-section">
+                    <h3>Get Involved</h3>
+                    <img src="./images/get-involved-image.webp" alt="Image of three people talking">
+                </div>
             </div>
-            <button class="scroll-button">&#10095;</button>
-        </div>
 
-        <!-- Boomtown news section -->
-        <div class="boomtown-news">
-            <h4>BOOMTOWN NEWS</h4>
-            <h1>SUBSCRIBE</h1>
-            <p>Stay in the loop with everything you need to know about Boomtown...</p>
-            <form>
-                <input type="email" name="email" id="email" placeholder="EMAIL...">
-                <button type="submit" id="submit-button" class="small-button green">
-                    <h5>Submit</h5>
-                </button>
-            </form>
-        </div>
+            <div class="countdown">
+                <h2 class="countdown-title">Countdown to the gathering</h2>
+                <div class="countdown-timer">
+                    <div class="time">
+                        <h2 id="days"></h2>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="hours"></h2>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="minutes"></h2>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="seconds"></h2>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED LINE UP SECTION -->
+        <section class="featured-section" id="featured">
+            <h2>Featured Line Up</h2>
+            <div class="featured">
+                <div class="featured-sub-section">
+                    <img src="./images/the-trouble-notes.webp" alt="Image of the band playing instruments">
+                    <h3>The Trouble Notes</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/three-daft-monkeys.webp" alt="Image of the four group members">
+                    <h3>3 Daft Monkeys</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/dizraeli.webp" alt="Close up of singer">
+                    <h3>Dizraeli</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/two-minutes-hate.webp" alt="Image of the group">
+                    <h3>Two Minuteshate</h3>
+                </div>
+            </div>
+
+
+            <div class="featured2">
+                <div class="featured2-marquee">
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LOVE SECTION -->
+        <section class="love-section" id="reviews">
+            <h2>Love for the green gathering </h2>
+            <div class="comment-sub-section">
+                <div class="comment">
+                    <p>The Green Gathering represents an island of sanity, magic and hope in a world gone stale and bad
+                        with greed and disconnection. It is essential. Thank you for what you do.</p>
+                </div>
+                <div class="comment">
+                    <p>Absolutely loved it, just the right size, very relaxed, great bands, solar disco was fab, I felt
+                        happy and free, very reasonably priced and nice food and drink, fantastic venue, so spacious.
+                        Brilliant.</p>
+                </div>
+                <div class="comment">
+                    <p>True relaxation and freedom from the stresses of modern living. I learnt new things, met amazing
+                        people, enjoyed inspiring music and felt recharged and ready to take on anything again when I
+                        got home.</p>
+                </div>
+            </div>
+
+            <div class="love-logo">
+                <div class="love-marquee">
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                </div>
+        </section>
     </main>
+    <!-- MAIN END -->
 
-    <!-- Footer section -->
-    <footer>
-        <ul class="social-media-icons">
-            <li><a href="https://www.instagram.com/boomtownfairofficial/?hl=en"><img class="social-icon" src="./Images/SVGs/Socials_Icons-01.svg" alt="instagram"></a></li>
-            <li><a href="https://x.com/BoomtownFair?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="social-icon" src="./Images/SVGs/Socials_Icons-02.svg" alt="x"></a></li>
-            <li><a href="https://www.youtube.com/channel/UChczTwpn82cl1B8Q1HiXr3w?feature=plcp"><img class="social-icon" src="./Images/SVGs/Socials_Icons-03.svg" alt="youtube"></a></li>
-            <li><a href="https://www.facebook.com/boomtownofficial"><img class="social-icon" src="./Images/SVGs/Socials_Icons-04.svg" alt="facebook"></a></li>
-            <li><a href="https://open.spotify.com/user/boomtownfairofficial/"><img class="social-icon" src="./Images/SVGs/Socials_Icons-05.svg" alt="spotify"></a></li>
-            <li><a href="https://www.tiktok.com/@boomtownfair"><img class="social-icon" src="./Images/SVGs/Socials_Icons-06.svg" alt="tiktok"></a></li>
-        </ul>
+    <footer class="footer">
+        <div>
+            <div class=social-icons>
+                <div class="social-icon">
+                    <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/youtube_social_icon_dark.webp" alt="Youtube">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/icon-instagram.svg" alt="Instagram">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/icon-twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <p class="rights">&copy; 2024 The Green Gathering. All rights reserved.</p>
+        </div>
 
-        <ul class="footer-list-socials">
-            <li><a href="#store">STORE</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#partners">PARTNERS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
 
-        <ul class="footer-list-legal">
-            <li><a href="#terms">TERMS & CONDITIONS</a></li>
-            <li><a href="#privacy">PRIVACY POLICY</a></li>
-            <li><a href="#cookies">COOKIES</a></li>
-        </ul>
+        <div class="footer-form">
+            <p>SUBSCRIBE TO OUR NEWSLETTER!</p>
+            <div class="footer-form-input">
+                <input type="email" placeholder=" ">
+                <button>Sign up with email</button>
+            </div>
+        </div>
+
+
     </footer>
+
+    <script src="./scripts/final-project.js"></script>
+
 </body>
+
 </html>
