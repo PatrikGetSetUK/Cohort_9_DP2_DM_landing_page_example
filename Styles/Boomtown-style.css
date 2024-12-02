@@ -1,0 +1,968 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /* Ensures all elements include padding and border in their total width and height */
+    margin: 0; /* Resets margin to zero for all elements */
+    padding: 0; /* Resets padding to zero for all elements */
+    z-index: 0; /* Sets the stacking context to the default level for all elements */
+}
+
+@font-face {
+    font-family: Storica-Regular; /* Defines a custom font Storica-Regular */
+    src: url(../Fonts/Storica-Regular.ttf); /* Specifies the path to the font file */
+}
+
+@font-face {
+    font-family: Gotham-Book; /* Defines another custom font Gotham-Book */
+    src: url(../Fonts/Gotham-Book.otf); /* Specifies the path to the font file */
+}
+
+:root {
+    --primary-font: Storica-Regular; /* Sets a CSS variable for primary font */
+    --secondary-font: Gotham-Book; /* Sets a CSS variable for secondary font */
+    
+    /* Color variables */
+    --black: #131313;
+    --almond: #F5E5D6;
+
+    --malachite: #12E16B;
+    --aquamarine: #98F1BE;
+
+    --chartreuse: #E0FF00;
+    --mindaro: #F4FFA8;
+
+    --periwinkle: #B8B0EA;
+    --lavender: #E5E1FF;
+    
+    --sandy-brown: #FF9548;
+    --peach: #FFCDA6;
+
+    --light-red: #FF7481;
+    --melon: #FFC2BC;
+
+    --electric-blue: #4DF6FE;
+    --light-blue: #CAFDFF;
+
+}
+
+/* Specific color classes */
+.green {
+    background-color: var(--malachite); /* Sets background color using a CSS variable */
+}
+
+.red {
+    background-color: var(--light-red); /* Sets background color using a CSS variable */
+}
+
+.yellow {
+    background-color: var(--chartreuse); /* Sets background color using a CSS variable */
+}
+
+.purple {
+    background-color: var(--periwinkle); /* Sets background color using a CSS variable */
+}
+
+/* HTML and Body styling */
+html {
+    font-size: 62.5%; /* Sets a base font size for easy rem calculations */
+}
+
+body {
+    height: 100vh; /* Sets body height to 100% of viewport height */
+    max-height: 100%; /* Ensures body cannot exceed 100% height */
+    width: 100vw; /* Sets body width to 100% of viewport width */
+    max-width: 100%; /* Ensures body cannot exceed 100% width */
+    scrollbar-width: none; /* Hides the scrollbar */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    font-size: 2.4rem; /* Sets body font size to 2.4 times the base (16px), equivalent to 24px */
+    background-color: var(--color-background); /* Sets background color using a CSS variable (not defined in provided code) */
+}
+
+/* Styling for heading elements h1, h2, h3, h5 */
+h1, h2, h3, h5 {
+    font-family: var(--primary-font);  /* Set the primary font family */
+    font-weight: normal;  /* Use normal font weight */
+    letter-spacing: 0.1rem;  /* Adjust letter spacing */
+    color: var(--black);  /* Set text color to black */
+    padding: 2rem 0;  /* Add padding above and below the headings */
+}
+
+/* Styling for heading h4 and paragraphs */
+h4, p {
+    font-family: var(--secondary-font);  /* Set the secondary font family */
+    font-weight: normal;  /* Use normal font weight */
+    letter-spacing: 0.1rem;  /* Adjust letter spacing */
+    color: var(--black);  /* Set text color to black */
+    padding: 2rem 0;  /* Add padding above and below paragraphs and h4 */
+    max-width: 600px;  /* Set maximum width for better readability */
+}
+
+/* Additional styling for paragraphs */
+p {
+    font-size: 1.8rem;  /* Set font size for paragraphs */
+    letter-spacing: -0.5px;  /* Fine-tune letter spacing */
+}
+
+/* Styling specific to h1 */
+h1 {
+    font-size: 68px;  /* Set font size for h1 */
+    line-height: 70px;  /* Set line height for h1 */
+    max-width: 950px;  /* Set maximum width for better responsiveness */
+    letter-spacing: -3px;  /* Adjust letter spacing */
+}
+
+/* Styling for a container with class 'text-container' */
+.text-container {
+    max-width: 600px;  /* Set maximum width of the container */
+    width: 100%;  /* Ensure the container takes up full width up to max-width */
+    margin: 0 auto;  /* Center the container horizontally */
+    padding: 20px;  /* Add padding inside the container */
+    font-size: 16px;  /* Set font size */
+    line-height: 1.5;  /* Set line height for better readability */
+    box-sizing: border-box;  /* Include padding and border in total element dimensions */
+}
+
+/* Styling specific to h2 */
+h2 {
+    font-size: 52px;  /* Set font size for h2 */
+    line-height: 54px;  /* Set line height for h2 */
+    letter-spacing: -4px;  /* Adjust letter spacing */
+}
+
+/* Styling specific to h3 */
+h3 {
+    font-size: 30px;  /* Set font size for h3 */
+    line-height: 32px;  /* Set line height for h3 */
+    letter-spacing: -1px;  /* Adjust letter spacing */
+}
+
+/* Styling specific to h5 */
+h5 {
+    font-size: 24px;  /* Set font size for h5 */
+    letter-spacing: -1.5px;  /* Adjust letter spacing */
+}
+
+/* Styling for buttons with class 'big-button' and 'small-button' */
+.big-button, 
+.small-button {
+    border: 1px solid;  /* Add a solid border */
+    display: flex;  /* Use flexbox for layout */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    transition: transform 0.3s;  /* Smooth transition for transform property */
+}
+
+/* Styling specific to 'big-button' */
+.big-button {
+    height: 75px;  /* Set height */
+    border-radius: 85px;  /* Set border radius for rounded corners */
+    box-shadow: 
+        1px 1px 0px var(--black),
+        1.5px 1.5px 0px var(--black),
+        2px 2px 0px var(--black),
+        2.5px 2.5px 0px var(--black),
+        3px 3px 0px var(--black),
+        3.5px 3.5px 0px var(--black);  /* Add multiple box shadows for a layered effect */
+    min-width: auto;  /* Allow button to shrink to fit content */
+}
+
+/* Styling specific to 'small-button' */
+.small-button {
+    height: 60px;  /* Set height */
+    border-radius: 60px;  /* Set border radius for rounded corners */
+    box-shadow: 
+        1px 1px 0px var(--black),
+        1.5px 1.5px 0px var(--black),
+        2px 2px 0px var(--black),
+        2.5px 2.5px 0px var(--black),
+        3px 3px 0px var(--black),
+        3.5px 3.5px 0px var(--black);  /* Add multiple box shadows for a layered effect */
+}
+
+/* Hover effect for both 'big-button' and 'small-button' */
+.big-button:hover, 
+.small-button:hover {
+    transform: scale(1.1);  /* Scale up the button on hover */
+    cursor: pointer;  /* Change cursor to pointer */
+}
+
+/* Active state effect for both 'big-button' and 'small-button' */
+.small-button:active,
+.big-button:active {
+    transform: translate(10px, 10px);  /* Move the button down and right on click */
+    box-shadow: 0px 0px 0px 0px;  /* Remove box shadow on click */
+}
+
+
+
+  /* ---#1.0 RESPONSIVE WEBPAGE--- */
+  /* ---#1.1 FOR DESKTOP--- */
+/* Body styles */
+body {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the start of the main axis (left for LTR languages) */
+    align-content: center; /* Align content in the center along the cross axis */
+    flex-direction: column; /* Arrange flex items vertically */
+}
+
+/* Header styles */
+header {
+    background-color: var(--almond); /* Set background color of the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space evenly between elements */
+    align-items: center; /* Align items vertically in the center */
+    padding: 30px; /* Add padding inside the header */
+    width: 100%; /* Make header full width */
+    height: auto; /* Allow height to adjust based on content */
+    z-index: 1; /* Ensure header is on top of other elements */
+}
+
+/* Logo styles */
+.main-logo img {
+    height: 40px; /* Maintain original aspect ratio of the image */
+    width: auto; /* Set width of the logo image */
+    margin-right: 30px; /* Add space to the right of the logo */
+}
+
+.main-logo {
+    transition: transform 0.3s; /* Smooth transition effect for transform property */
+}
+
+.main-logo:hover {
+    transform: scale(1.05); /* Enlarge the logo slightly on hover */
+}
+
+/* Navigation styles */
+nav {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for layout */
+    list-style: none; /* Remove default list styling */
+    margin-right: auto; /* Push list items to the left */
+}
+
+nav ul li {
+    font-family: var(--primary-font); /* Set font family */
+    margin: 0 20px; /* Add space between list items */
+}
+
+nav ul li a {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+    color: var(--black); /* Set text color */
+    text-decoration: none; /* Remove underline from links */
+    letter-spacing: -1px; /* Adjust letter spacing */
+}
+
+nav ul li a:hover {
+    /* transform: translateY(-5px); */ /* Optional: Uncomment to add vertical shift on hover */
+    color: var(--malachite); /* Change text color on hover */
+}
+
+/* Buttons in the header */
+.top-buttons {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    margin-left: auto; /* Push buttons to the right */
+}
+
+#info-button,
+#tickets-button {
+    margin-left: 10px; /* Add space between buttons */
+    width: 165px; /* Set fixed width for buttons */
+}
+
+#tickets-button {
+    background-color: var(--malachite); /* Set background color for tickets button */
+    width: 165px; /* Set fixed width for tickets button */
+    margin-left: 10px; /* Add space to the left of tickets button */
+}
+
+#tickets-button:hover {
+    background-color: var(--aquamarine); /* Change background color on hover */
+}
+
+#info-button {
+    width: 165px; /* Set fixed width for info button */
+    margin-right: 10px; /* Add space to the right of info button */
+}
+
+/* HERO IMAGE */
+
+/* Styles for the hero image container */
+.hero-image {
+    position: relative; /* Position relative to contain absolute positioned elements */
+    width: 100%; /* Ensure full width */
+    display: block; /* Display as block element */
+}
+
+/* Styles for the image inside the hero image container */
+.hero-image img {
+    display: block; /* Display as block element */
+    width: 100%; /* Ensure full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for a transparent logo positioned on top of the hero image */
+#transparent-logo {
+    position: absolute; /* Position absolutely within its container */
+    top: 100px; /* Adjust top position */
+    left: 10px; /* Adjust left position */
+    opacity: 0.2; /* Adjust opacity for transparency */
+    z-index: 10; /* Ensure the logo is above the image */
+}
+
+/* Section specific styles for 'BANG GOES NORMAL' */
+#bang-goes-normal {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center align text */
+    padding: 50px; /* Add padding inside the section */
+    gap: 50px; /* Add gap between child elements */
+    background-color: var(--aquamarine); /* Set background color */
+    height: 800px; /* Set fixed height */
+    position: relative; /* Position relative to contain absolute positioned elements */
+}
+
+/* Styles for paragraphs inside the 'BANG GOES NORMAL' section */
+#bang-goes-normal p {
+    position: absolute; /* Position absolutely within its container */
+    bottom: 180px; /* Adjust bottom position */
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center align text */
+}
+
+/* Animation styles for text typing effect */
+.headingTyped {
+    border-right: 0.1em solid black; /* Create a typing effect with a border */
+    overflow: hidden; /* Hide overflowing content */
+    animation: blink-caret 0.75s step-end infinite; /* Define caret blinking animation */
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Set border color to transparent at start and end */
+    }
+    50% {
+        border-color: black; /* Set border color to black at midpoint */
+    }
+}
+
+/* Styles for a specific button with ID 'secure-ticket-button' */
+#secure-ticket-button {
+    margin-top: auto; /* Push the button to the bottom of its container */
+    padding: 25px; /* Add padding inside the button */
+}
+
+/* TRIO CARDS */
+
+/* Styles for a container with class 'trio-cards' */
+.trio-cards {
+    display: flex; /* Use flexbox for layout */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Styles for cards with class 'small-card' */
+.small-card {
+    height: 1100px; /* Set height of cards */
+    display: flex; /* Use flexbox for layout */
+    flex: 1; /* Distribute remaining space evenly among cards */
+    padding: 25px; /* Add padding inside the card */
+    text-align: left; /* Align text to the left */
+    flex-direction: column; /* Arrange child elements vertically */
+}
+
+/* Styles for 'Learn More' buttons */
+.learn-more-button {
+    min-width: 200px; /* Set minimum width for buttons */
+    margin: 15px; /* Add margin around buttons */
+    margin-top: auto; /* Push buttons to the bottom of the card */
+}
+
+/* Styles for images inside 'small-card' */
+.small-card-img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio of images */
+    margin-bottom: 40px; /* Add space below images */
+}  
+
+/* Styles for section with ID 'the-music' */
+#the-music {
+    background-color: var(--melon); /* Set background color */
+}
+
+/* Styles for section with ID 'the-story' */
+#the-story {
+    background-color: var(--mindaro); /* Set background color */
+}
+
+/* Styles for section with ID 'the-city' */
+#the-city {
+    background-color: var(--lavender); /* Set background color */
+}
+
+/* Footer list item styles */
+footer li {
+    font-family: var(--primary-font); /* Set font family for footer list items */
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative; /* Ensure relative positioning */
+    width: 100%; /* Ensure full width */
+    max-width: 100vw; /* Limit maximum width to viewport width */
+    margin: auto; /* Center the container horizontally */
+}
+  
+.carousel-slide {
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Ensure relative positioning */
+}
+
+.carousel-slide img {
+    width: 100%; /* Ensure images take full width of the carousel */
+    position: absolute; /* Position images absolutely within the carousel */
+    opacity: 0; /* Start with images hidden */
+    transition: opacity 2s ease; /* Add transition for fade effect */
+}
+  
+.carousel-slide img.active {
+    opacity: 1; /* Show the active image */
+    position: relative; /* Ensure the active image is visible */
+}
+
+.carousel-navigation {
+    position: absolute; /* Ensure absolute positioning */
+    top: 50%; /* Position navigation vertically centered */
+    transform: translateY(-50%); /* Center navigation vertically */
+    width: 100%; /* Ensure full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space evenly between navigation elements */
+    padding: 25px; /* Add padding inside navigation */
+}
+  
+.carousel-navigation .prev,
+.next {
+    color: var(--black); /* Set color for navigation buttons */
+}
+  
+.carousel-navigation button {
+    background-color: var(--light-red); /* Set background color for navigation buttons */
+    border: none; /* Remove border */
+    font-size: 45px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    outline: none; /* Remove outline */
+    padding: 25px 40px; /* Add padding inside buttons */
+    border-radius: 2px; /* Add border radius */
+}
+  
+.carousel-bullets {
+    position: absolute; /* Ensure absolute positioning */
+    bottom: 20px; /* Position bullets at the bottom */
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center align bullets */
+}
+
+.carousel-bullets .bullet {
+    display: inline-block; /* Display bullets inline */
+    width: 10px; /* Set width of bullets */
+    height: 10px; /* Set height of bullets */
+    background-color: var(--melon); /* Set background color of bullets */
+    border-radius: 50%; /* Create circular bullets */
+    margin: 0 5px; /* Add margin between bullets */
+    cursor: pointer; /* Set cursor to pointer */
+}
+  
+.carousel-bullets .bullet.active {
+    background-color: var(--light-red); /* Set background color of active bullet */
+}
+
+/* LARGE CARDS */
+
+/* Styles for container with class 'large-cards' using CSS grid */
+.large-cards {
+    display: grid; /* Use CSS grid for layout */
+    position: relative; /* Ensure relative positioning for contained elements */
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Styles for each card with class 'large-card' */
+.large-card {
+    max-height: 1100px; /* Set maximum height for each card */
+    display: flex; /* Use flexbox for layout inside cards */
+    padding: 30px; /* Add padding inside each card */
+    flex-direction: column; /* Arrange child elements vertically */
+}
+
+/* Styles for image container inside 'large-card' */
+.large-card .image-container {
+    position: relative; /* Ensure relative positioning */
+    width: 100%; /* Ensure full width */
+    padding-top: 100%; /* Maintain 1:1 aspect ratio (height will be 100% of width) */
+}
+
+/* Styles for images inside 'large-card' */
+.large-card img {
+    position: absolute; /* Position absolutely within the image container */
+    top: 0; /* Align to top of container */
+    left: 0; /* Align to left of container */
+    width: 100%; /* Ensure image takes full width of container */
+    height: 100%; /* Ensure image takes full height of container */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    display: block; /* Ensure image behaves as block element */
+}
+
+/* Styles for buttons inside 'large-card' */
+.large-card button {
+    width: 92%; /* Set width of buttons */
+    margin: 0 auto; /* Center the button horizontally */
+    margin-top: 50px; /* Add top margin */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+/* Styles for card with ID 'discover-card' */
+#discover-card {
+    background-color: var(--aquamarine); /* Set background color */
+}
+
+/* Styles for 'big-button' inside 'discover-card' */
+#discover-card .big-button {
+    background-color: var(--malachite); /* Set background color for big-button */
+}
+
+/* Styles for card with ID 'info-card' */
+#info-card {
+    background-color: var(--melon); /* Set background color */
+}
+
+/* Styles for 'big-button' inside 'info-card' */
+#info-card .big-button {
+    background-color: var(--light-red); /* Set background color for big-button */
+}
+
+/* Styles for card with ID 'news-card' */
+#news-card {
+    background-color: var(--mindaro); /* Set background color */
+}
+
+/* Styles for 'big-button' inside 'news-card' */
+#news-card .big-button {
+    background-color: var(--chartreuse); /* Set background color for big-button */
+}
+
+/* Styles for card with ID 'merch-card' */
+#merch-card {
+    background-color: var(--lavender); /* Set background color */
+}
+
+/* Styles for 'big-button' inside 'merch-card' */
+#merch-card .big-button {
+    background-color: var(--periwinkle); /* Set background color for big-button */
+}
+
+/* Styles for container with class 'marquee-container' */
+.marquee-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    position: relative; /* Ensure relative positioning */
+    overflow: hidden; /* Hide overflowing content */
+    height: 100px; /* Set fixed height */
+    background-color: var(--melon); /* Set background color */
+}
+
+/* Styles for 'marquee' text animation */
+.marquee {
+    width: 100vw; /* Ensure full viewport width */
+    position: absolute; /* Position absolutely */
+    max-width: 100%; /* Ensure maximum width */
+    margin: 0 auto; /* Center horizontally */
+    display: inline-block; /* Display as inline block */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: marquee 20s linear infinite; /* Apply marquee animation */
+    -webkit-animation: marquee 20s linear infinite; /* Vendor prefix for compatibility */
+}
+
+/* Keyframes for 'marquee' animation */
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0); /* Start from original position */
+        -webkit-transform: translate(0, 0); /* Vendor prefix */
+        -moz-transform: translate(0, 0); /* Vendor prefix */
+        -ms-transform: translate(0, 0); /* Vendor prefix */
+        -o-transform: translate(0, 0); /* Vendor prefix */
+    }
+    100% {
+        transform: translate(-100%, 0); /* Slide left */
+        -webkit-transform: translate(-100%, 0); /* Vendor prefix */
+        -moz-transform: translate(-100%, 0); /* Vendor prefix */
+        -ms-transform: translate(-100%, 0); /* Vendor prefix */
+        -o-transform: translate(-100%, 0); /* Vendor prefix */
+    }
+}
+
+/* Styles for heading inside 'marquee' */
+.marquee h3 {
+    display: inline; /* Display as inline element */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Styles for scroll button */
+.scroll-button {
+    background-color: var(--light-red); /* Set background color */
+    border: none; /* Remove border */
+    font-size: 50px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    outline: none; /* Remove outline */
+    padding: 30px 50px; /* Add padding inside button */
+    border-radius: 2px; /* Add border radius */
+    position: absolute; /* Position absolutely */
+    right: 0; /* Align to the right */
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+    z-index: 1; /* Ensure button is above other content */
+}
+
+/* BOOMTOWN NEWS / SUBSCRIBE */
+
+.boomtown-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F5E5D6;
+    padding: 70px;
+}
+
+.boomtown-news input[type="email"] {
+    padding: 20px;
+    margin: 50px;
+    height: 50px;
+    width: 800px;
+    max-width: auto;
+    border-radius: 50px;
+    border: 1px solid var(--black);
+    background-color: var(--almond);
+    margin-bottom: 30px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    font-size: large;
+}
+
+.boomtown-news button[type="submit"] {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 100px;
+    background-color: var(--malachite);
+    text-align: center; /* Center align the content in the footer */
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 80px; /* Add some spacing between the icons */
+    margin-bottom: 100px; /* Add some space below the social media icons */ 
+}
+
+.social-media-icons li {
+    list-style: none; /* Remove bullet points from the list items */
+}
+
+.social-icon {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slightly increase the size */
+}
+
+.footer-list-socials {
+    margin-bottom: 50px; /* Add some space below the social list */
+}
+
+.footer-list-legal 
+.footer-list-socials {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Allow the list items to wrap to the next line if necessary */
+    gap: 5px; /* Add some spacing between the list items */
+    list-style: none; /* Remove bullet points from the list items */
+}
+
+.footer-list-socials li {
+    letter-spacing: -1px;
+    list-style: none; /* Remove bullet points from the list items */
+}
+
+.footer-list-legal li {
+    letter-spacing: -1px;
+    list-style: none; /* Remove bullet points from the list items */
+}
+
+.footer-list-legal li a {
+    text-decoration: none; /* Remove the underline from the links */
+    color: var(--black); /* Ensure the text color is black */
+    font-family: var(--primary-font); /* Ensure the font family is applied */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.footer-list-socials li a {
+    text-decoration: none; /* Remove the underline from the links */
+    color: var(--black); /* Ensure the text color is black */
+    font-family: var(--primary-font); /* Ensure the font family is applied */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.footer-list-socials li a:hover {
+    transform: translateY(-5px);
+    color: var(--chartreuse);
+}
+
+.footer-list-legal li a:hover {
+    transform: translateY(-5px);
+    color: var(--chartreuse);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column; /* Stacks header elements vertically */
+        align-items: flex-start; /* Aligns items to the start */
+    }
+
+    nav ul {
+        display: flex; /* Ensures flex properties are applied */
+        flex-direction: row; /* Places nav items in a row */
+        margin: 20px 0; /* Adds space above and below the list */
+        padding: 0; /* Removes default padding */
+        width: 100%; /* Makes nav full width */
+        justify-content: flex-start; /* Aligns nav items to the start */
+    }
+
+    nav ul li {
+        display: flex; /* Makes list items flex elements */
+        margin: 0 10px; /* Adds horizontal margin between items */
+    }
+
+    .top-buttons {
+        display: flex; /* Ensures flex properties are applied */
+        margin-top: 10px; /* Adds space above buttons */
+        width: 100%; /* Makes top buttons full width */
+        justify-content: space-between; /* Distributes space between buttons */
+    }
+
+    #info-button,
+    #tickets-button {
+        width: 48%; /* Makes buttons take up half of the width each */
+        margin: 0; /* Removes margin between buttons */
+    }
+
+    .carousel-navigation button {
+        font-size: 30px; /* Sets the font size of the buttons to 30 pixels */
+        cursor: pointer; /* Changes the cursor to a pointer when hovering over the buttons */
+        outline: none; /* Removes the outline when the button is focused */
+        padding: 20px 30px 20px 30px; /* Sets the padding inside the button (top, right, bottom, left) */
+        border-radius: 2px; /* Rounds the corners of the button */
+    }    
+}
+
+/* ---#1.2 FOR IPAD--- */
+
+@media (max-width: 810px) {
+    /* Media query for screens up to 810px wide */
+
+    header {
+        flex-direction: column; /* Stacks header elements vertically */
+        align-items: flex-start; /* Aligns items to the start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stacks nav items vertically */
+        width: 100%; /* Makes nav full width */
+        align-items: flex-start; /* Aligns nav items to the start */
+    }
+
+    .main-logo img {
+        align-items: center; /* Centers image vertically */
+        width: 100%; /* Makes logo image full width */
+        height: auto; /* Maintains aspect ratio of the logo */
+        margin-bottom: 10px; /* Adds space below the logo */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adds margin between items */
+        margin-left: 30px; /* Adds left margin to nav items */
+    }
+
+    .top-buttons {
+        margin-top: 10px; /* Adds space above buttons */
+        width: 100%; /* Makes top buttons full width */
+        justify-content: space-between; /* Distributes space between buttons */
+    }
+
+    #info-button,
+    #tickets-button {
+        width: 48%; /* Makes buttons take up half of the width each */
+        margin: 0; /* Removes margin between buttons */
+    }
+
+    #bang-goes-normal {
+        height: 950px; /* Sets specific height for this section */
+        padding: 30px; /* Adds padding around the content */
+        text-align: center; /* Centers content horizontally */
+    }
+
+    #bang-goes-normal h1 {
+        font-size: 60px; /* Sets font size of heading */
+    }
+
+    #bang-goes-normal p {
+        position: absolute; /* Positions paragraph absolutely */
+        bottom: 180px; /* Adjusts bottom positioning */
+        width: 100%; /* Ensures full width */
+        text-align: center; /* Centers text horizontally */
+        margin-top: 20px; /* Adds space above the paragraph */
+        padding: 0px 20px 0px 20px; /* Adds padding inside the paragraph */
+    }
+
+    .trio-cards {
+        display: flex; /* Displays cards in a flex container */
+        flex-direction: column; /* Stacks cards vertically */
+    }
+
+    .trio-cards p {
+        display: flex; /* Displays paragraphs as flex items */
+        margin-bottom: 20px; /* Adds space below paragraphs */
+    }
+
+    .large-cards {
+        display: grid; /* Displays cards in a grid layout */
+        grid-template-columns: 1fr; /* Sets grid to one column */
+        display: flex; /* Ensures cards are displayed as flex items */
+        flex-direction: column; /* Stacks cards vertically */
+    }
+
+    .large-card {
+        margin: 0 auto; /* Centers the cards horizontally */
+        width: 100%; /* Ensures the cards take full width */
+    }
+
+    .boomtown-news input[type="email"] {
+        width: 400px; /* Sets width of email input field */
+    }
+
+    .carousel-navigation button {
+        font-size: 20px; /* Sets the font size of navigation buttons */
+        cursor: pointer; /* Changes cursor to pointer */
+        outline: none; /* Removes outline when button is focused */
+        padding: 15px 20px 15px 20px; /* Sets padding inside the button */
+        border-radius: 2px; /* Rounds the corners of the button */
+    }
+
+    .social-media-icons {
+        display: flex; /* Displays social media icons as flex items */
+        justify-content: center; /* Centers the icons horizontally */
+        gap: 35px; /* Adds spacing between the icons */
+        margin-bottom: 100px; /* Adds space below the social media icons */
+    }
+}
+
+/* ---#1.3 FOR MOBILES--- */
+
+@media only screen and (max-width: 600px) {
+    /* Media query for screens up to 600px wide */
+
+    nav {
+        display: flex; /* Displays nav as a flex container */
+        flex-direction: column; /* Stacks nav items vertically */
+        align-items: flex-start; /* Aligns items to the start */
+        width: 100%; /* Full width for the nav */
+    }
+
+    .main-logo img {
+        display: flex; /* Displays logo image as a flex item */
+        align-items: center; /* Centers image vertically */
+        width: 100%; /* Makes logo image full width */
+        height: auto; /* Maintains aspect ratio of the logo */
+        margin-bottom: 10px; /* Adds space below the logo */
+    }
+
+    nav ul li a {
+        font-size: 85%; /* Sets font size of nav links to 85% of the parent */
+    }
+
+    h1 {
+        font-size: 51px; /* Sets font size of h1 to 51 pixels */
+        line-height: 52.5px; /* Sets line height of h1 to 52.5 pixels */
+    }
+
+    h2 {
+        font-size: 39px; /* Sets font size of h2 to 39 pixels */
+        line-height: 40.5px; /* Sets line height of h2 to 40.5 pixels */
+    }
+
+    h3 {
+        font-size: 22.5px; /* Sets font size of h3 to 22.5 pixels */
+        line-height: 24px; /* Sets line height of h3 to 24 pixels */
+    }
+
+    h4, p {
+        font-size: 1.35rem; /* Sets font size of h4 and p to 1.35 rem */
+    }
+
+    h5 {
+        font-size: 18px; /* Sets font size of h5 to 18 pixels */
+    }
+
+    .big-button, .small-button {
+        font-size: 1.8rem; /* Sets font size of .big-button and .small-button to 1.8 rem */
+    }
+
+    #bang-goes-normal {
+        height: 800px; /* Sets specific height for this section */
+        padding: 30px; /* Adds padding around the content */
+        text-align: center; /* Centers content horizontally */
+    }
+
+    #bang-goes-normal h1 {
+        font-size: 48px; /* Sets font size of h1 inside #bang-goes-normal to 48 pixels */
+    }
+
+    .boomtown-news input[type="email"] {
+        width: 400px; /* Sets width of email input field */
+        font-size: 1.35rem; /* Sets font size of email input field to 1.35 rem */
+    }
+
+    .social-media-icons {
+        display: flex; /* Displays social media icons as flex items */
+        justify-content: center; /* Centers the icons horizontally */
+        gap: 17.5px; /* Adds spacing between the icons */
+        margin-bottom: 100px; /* Adds space below the social media icons */
+    }
+
+    .boomtown-news input[type="email"] {
+        width: 300px; /* Overrides width of email input field to 300px */
+    }
+
+    footer ul li a {
+        font-size: 20px; /* Sets font size of footer links to 20 pixels */
+    }
+}
