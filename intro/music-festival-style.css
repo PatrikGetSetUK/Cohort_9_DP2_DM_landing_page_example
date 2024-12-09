@@ -1,0 +1,38 @@
+h1 {
+  color: red;
+}
+
+p {
+  background-color: darkblue;
+  color: #ffae02;
+}
+
+.main-font {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: end;
+  text-transform: capitalize;
+  text-shadow: 3px 3px 5px red;
+}
+
+h2,
+h3 {
+  color: green;
+}
+
+#about {
+  border: 5px solid orange;
+  border-radius: 8px;
+
+  padding: 20px;
+  padding: 20px 50px;
+  padding: 10px 2px 20px 100px;
+  padding-left: 50px;
+
+  margin: 30px;
+  margin: 20px 50px;
+  margin: 10px 2px 20px 100px;
+  margin-left: 50px;
+}
