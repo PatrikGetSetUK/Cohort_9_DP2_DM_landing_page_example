@@ -4,170 +4,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival landing page</title>
-    <!-- SEO Meta tags -->
-    <meta name="description" content="Description of your webpage" />
-    <meta name="keywords" content="Keywords for your webpage" />
-    <meta name="author" content="Your Name" />
+
+
+    <title>The Green Gathering</title>
+
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August. ">
+    <meta name="keywords" content="the green gathering, off-grid festival, festival, green gathering festival">
+    <meta name="author" content="Ruth Haydock">
 
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Your Webpage Title" />
-    <meta property="og:description" content="Description of your webpage" />
-    <meta property="og:image" content="URL to your webpage's image" />
-    <meta property="og:url" content="URL of your webpage" />
-    <meta name="twitter:title" content="Your Webpage Title" />
-    <meta name="twitter:description" content="Description of your webpage" />
-    <meta name="twitter:image" content="URL to your webpage's image" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="The Green Gathering" />
+    <meta property="og:description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August." />
+    <meta property="og:image" content="./images/green-gathering-logo.webp" />
+    <meta property="og:url" content="./images/green-gathering-logo.webp" />
+    <meta name="twitter:title" content="The Green Gathering" />
+    <meta name="twitter:description"
+        content="The original off-grid festival, the Green Gathering taking place on 1st-4th August." />
+    <meta name="twitter:image" content="./images/green-gathering-logo.webp" />
+    <meta name="twitter:card" content="./images/green-gathering-logo.webp" />
+
+    <!-- Used to not index the content on google search, like law sections etc -->
+    <!-- <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow"> -->
+
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.webp">
 
-    <!-- CSS external file -->
-    <link rel="stylesheet" href="./style.css">
+    <!-- Barlow font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./styles/final-project.css">
+
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo"><a href="./index.html">LOGO</a></div>
 
-            <div class="menu">
-                <a href="./index.html">Home</a>
-                <a href="#section1">About</a>
-                <a href="#section2">Services</a>
-                <a href="#section3">Contact</a>
+    <!-- HEADER START -->
+    <header id="header">
+        <div class="logo">
+            <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+        </div>
+
+        <nav>
+            <!-- Desktop -->
+            <ul class="menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#key-info">Key Info</a></li>
+                <li><a href="#featured">Line Up</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li>
+                    <form class="example" action="/action_page.php">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li>
+                    <button>Get Tickets</button>
+                </li>
+            </ul>
+
+            <!-- Tablet and Mobile -->
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-
-            <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
         </nav>
-
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="./index.html" onclick="closeMenu()">Home</a>
-            <a href="#section1" onclick="closeMenu()">About</a>
-            <a href="#section2" onclick="closeMenu()">Services</a>
-            <a href="#section3" onclick="closeMenu()">Contact</a>
-        </div>
     </header>
+    <!-- HEADER END -->
 
-    <!-- Hero Division -->
-    <div id="hero">
-        <img src="./images/new-story-thumbnail.webp" alt="tickets offer" class="hero-image">
 
-        <div class="hero-text">
-            <h1>Your tag line here</h1>
-            <button class="cta-button">Buy Tickets</button>
-        </div>
-    </div>
+    <!-- MAIN START -->
+    <main>
 
-    <!-- Sections with Anchor links -->
-    <section id="section1">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nostrum explicabo consectetur, temporibus
-            atque sed ipsum maxime totam expedita! In error numquam, sunt enim sed quaerat impedit atque a sapiente.</p>
+        <!-- SCROLL BUTTON -->
+        <button id="scrollButton">Get Tickets</button>
 
-        <!-- Carousel -->
-        <div class="carousel-container">
-            <!-- Image slides -->
+        <!-- HERO SECTION  -->
+        <section class="hero-image">
+            <div class="hero-text">
+                <h1>1st-4th August 2024</h1>
+                <p>The Original Off-Grid Festival</p>
+                <button type="button">Get Tickets Now</button>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
             <div class="carousel-slide">
-                <img src="./images/dj-edits.webp" alt="dj at BoomTown festival">
-                <img src="./images/new-story-thumbnail.webp" alt="example">
-                <img src="./images/people-camping.webp" alt="camping">
-                <img src="./images/people-camping.webp" alt="camping">
+                <img src="./images/gen-festival-image-9.webp" alt="Image of women at festival">
+                <img src="./images/gen festival image 10.png" alt="">
+                <img src="./images/get-involved-image.webp" alt="">
             </div>
 
-            <!-- Left and right arrows -->
-            <div class="carousel-navigation">
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
+            <div class="about-text">
+
+                <h2>Non-profit Low Impact Festival</h2>
+                <p>Join us for four days of low impact living in an area of outstanding beauty, every nook and corner
+                    bursting with music, creativity, natural abundance and community spirit.</p>
+                <p>The original off-grid,non-profit festival: we’re powered by sun, wind, people and passion for
+                    change.Intimate solar stages showcase up and coming acts, legendary festival favourites, DJs and
+                    spellbinding raconteurs. </p>
+                <p>Share wisdom and skills; find friends old and new; weave, weld and tell stories.</p>
+                <p>Have a party - then wake up and put the world to rights.This festival’s impact lasts longer than a
+                    weekend.</p>
+                <button class="about-btn">Join Us</button>
             </div>
+        </section>
 
-            <!-- Bullet points indicators -->
-            <div class="carousel-bullets">
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-                <span class="bullet"></span>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="section2">
-        <h2>Services</h2>
-
-        <div class="web-cards">
-            <!-- Card 01 -->
-            <div class="card small-card">
-                <img src="./images/dj-edits.webp" alt="web card image" class="card-image">
-                <div class="card-content">
-                    <h2 class="card-title">Card Title</h2>
-                    <p class="card-description">This is a short description of the card. It provides some details to
-                        engage the
-                        user.</p>
-                    <button class="cta-button" title="Find more info here.">Learn More</button>
+        <!-- WHAT SECTION  -->
+        <section class="know-section" id="key-info">
+            <h2 class="know-title">What You Need to Know</h2>
+            <div class="know">
+                <div class="know-sub-section">
+                    <h3>Where & How</h3>
+                    <img src="./images/where-how.webp" alt="Image of women in a van">
+                </div>
+                <div class="know-sub-section">
+                    <h3>Line Up</h3>
+                    <img src="./images/line-up-image.webp" alt="Image of people in a tent">
+                </div>
+                <div class="know-sub-section">
+                    <h3>Get Involved</h3>
+                    <img src="./images/get-involved-image.webp" alt="Image of three people talking">
                 </div>
             </div>
 
-            <!-- Card 02 -->
-            <div class="card small-card">
-                <img src="./images/dj-edits.webp" alt="web card image" class="card-image">
-                <div class="card-content">
-                    <h2 class="card-title">Card Title</h2>
-                    <p class="card-description">This is a short description of the card. It provides some details to
-                        engage the
-                        user.</p>
-                    <button class="cta-button" title="Find more info here.">Learn More</button>
+            <div class="countdown">
+                <h2 class="countdown-title">Countdown to the gathering</h2>
+                <div class="countdown-timer">
+                    <div class="time">
+                        <h2 id="days"></h2>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="hours"></h2>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="minutes"></h2>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time">
+                        <h2 id="seconds"></h2>
+                        <small>Seconds</small>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 03 -->
-            <div class="card small-card">
-                <img src="./images/dj-edits.webp" alt="web card image" class="card-image">
-                <div class="card-content">
-                    <h2 class="card-title">Card Title</h2>
-                    <p class="card-description">This is a short description of the card. It provides some details to
-                        engage the
-                        user.</p>
-                    <button class="cta-button" title="Find more info here.">Learn More</button>
+        </section>
+
+
+        <!-- FEATURED LINE UP SECTION -->
+        <section class="featured-section" id="featured">
+            <h2>Featured Line Up</h2>
+            <div class="featured">
+                <div class="featured-sub-section">
+                    <img src="./images/the-trouble-notes.webp" alt="Image of the band playing instruments">
+                    <h3>The Trouble Notes</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/three-daft-monkeys.webp" alt="Image of the four group members">
+                    <h3>3 Daft Monkeys</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/dizraeli.webp" alt="Close up of singer">
+                    <h3>Dizraeli</h3>
+                </div>
+                <div class="featured-sub-section">
+                    <img src="./images/two-minutes-hate.webp" alt="Image of the group">
+                    <h3>Two Minuteshate</h3>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="section3">
-        <h2>Contact</h2>
-        <p>Reach out to us for more information.</p>
-        <img src="./images/new-story-thumbnail.webp" alt="offer">
 
-        <p>Some additional text.</p>
-    </section>
+            <div class="featured2">
+                <div class="featured2-marquee">
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/world-logo.webp" alt="World logo">
+                </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+            </div>
+        </section>
+
+        <!-- LOVE SECTION -->
+        <section class="love-section" id="reviews">
+            <h2>Love for the green gathering </h2>
+            <div class="comment-sub-section">
+                <div class="comment">
+                    <p>The Green Gathering represents an island of sanity, magic and hope in a world gone stale and bad
+                        with greed and disconnection. It is essential. Thank you for what you do.</p>
+                </div>
+                <div class="comment">
+                    <p>Absolutely loved it, just the right size, very relaxed, great bands, solar disco was fab, I felt
+                        happy and free, very reasonably priced and nice food and drink, fantastic venue, so spacious.
+                        Brilliant.</p>
+                </div>
+                <div class="comment">
+                    <p>True relaxation and freedom from the stresses of modern living. I learnt new things, met amazing
+                        people, enjoyed inspiring music and felt recharged and ready to take on anything again when I
+                        got home.</p>
+                </div>
             </div>
 
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <div class="love-logo">
+                <div class="love-marquee">
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href="">Line Up</a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Tickets </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                    <a href=""> Get Involved </a>
+                    <img src="./images/green-gathering-logo.webp" alt="Green Gathering Logo">
+                </div>
+        </section>
+    </main>
+    <!-- MAIN END -->
+
+    <footer class="footer">
+        <div>
+            <div class=social-icons>
+                <div class="social-icon">
+                    <img src="./images/icon-facebook.svg" alt="Facebook">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/youtube_social_icon_dark.webp" alt="Youtube">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/icon-instagram.svg" alt="Instagram">
+                </div>
+                <div class="social-icon">
+                    <img src="./images/icon-twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <p class="rights">&copy; 2024 The Green Gathering. All rights reserved.</p>
         </div>
+
+
+        <div class="footer-form">
+            <p>SUBSCRIBE TO OUR NEWSLETTER!</p>
+            <div class="footer-form-input">
+                <input type="email" placeholder=" ">
+                <button>Sign up with email</button>
+            </div>
+        </div>
+
+
     </footer>
 
-    <!-- Cookie Popup -->
-    <div id="cookie-popup" class="cookie-popup">
-        <p>This website uses cookies to ensure get the best experience.
-            <a href="#">Learn more</a>
-        </p>
-        <button onclick="acceptCookies()">Accept</button>
-        <button onclick="declineCookies()">Decline</button>
-    </div>
+    <script src="./scripts/final-project.js"></script>
 
-    <!-- JavaScript external file -->
-    <script src="./script.js"></script>
 </body>
 
 </html>
